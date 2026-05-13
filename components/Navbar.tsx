@@ -1,16 +1,24 @@
-type NavbarProps = {
-  name: string;
+type NavLink = {
+  label: string;
+  href: string;
 };
 
-export function Navbar({ name }: NavbarProps) {
+type NavbarProps = {
+  name: string;
+  links: NavLink[];
+};
+
+export function Navbar({ name, links }: NavbarProps) {
   return (
     <nav className="flex items-center justify-between">
       <p className="text-lg font-bold">{name}</p>
 
       <div className="flex gap-4 text-sm text-gray-600">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        {links.map((link) => (
+          <a key={link.href} href={link.href}>
+            {link.label}
+          </a>
+        ))}
       </div>
     </nav>
   );
