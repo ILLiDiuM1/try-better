@@ -1,6 +1,7 @@
 import { projects } from "@/data/projects";
 import { Navbar } from "@/components/Navbar";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Hero } from "@/components/Hero";
 
 export default function Home() {
   return (
@@ -14,37 +15,12 @@ export default function Home() {
             { label: "Contact", href: "#contact" },
           ]}
 />
-        <section className="flex min-h-[70vh] flex-col justify-center gap-6">
-          <p className="text-sm font-medium uppercase tracking-widest text-gray-500">
-            Frontend Developer
-          </p>
-
-          <h1 className="max-w-3xl text-5xl font-bold tracking-tight">
-            I build clean, responsive web applications with React and Next.js.
-          </h1>
-
-          <p className="max-w-2xl text-lg text-gray-600">
-            I am learning frontend development by building real projects,
-            improving my skills step by step, and documenting the process.
-          </p>
-
-          <div className="flex gap-4">
-            <a
-              href="#projects"
-              className="rounded-xl bg-black px-5 py-3 text-white"
-            >
-              View Projects
-            </a>
-
-            <a
-              href="https://github.com/ILLiDiuM1"
-              target="_blank"
-              className="rounded-xl border border-gray-300 px-5 py-3"
-            >
-              GitHub
-            </a>
-          </div>
-        </section>
+        <Hero
+          label="Frontend Developer"
+          title="I build clean, responsive web applications with React and Next.js."
+          subtitle="I am learning frontend development by building real projects, improving my skills step by step, and documenting the process."
+          githubUrl="https://github.com/ILLiDiuM1"
+        />
 
         <section id="about" className="border-t py-16">
           <h2 className="mb-4 text-3xl font-bold">About me</h2>
