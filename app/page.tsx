@@ -1,5 +1,6 @@
 import { projects } from "@/data/projects";
 import { Navbar } from "@/components/Navbar";
+import { ProjectCard } from "@/components/ProjectCard";
 
 export default function Home() {
   return (
@@ -58,21 +59,12 @@ export default function Home() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {projects.map((project) => (
-              <div key={project.title} className="rounded-2xl border p-5 shadow-sm">
-                <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
-                <p className="mb-4 text-sm text-gray-600">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+              />
             ))}
           </div>
         </section>
