@@ -1,19 +1,11 @@
 import { projects } from "@/data/projects";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   return (
     <main className="min-h-screen px-6 py-10">
       <section className="mx-auto flex max-w-5xl flex-col gap-8">
-        <nav className="flex items-center justify-between">
-          <p className="text-lg font-bold">Artem</p>
-
-          <div className="flex gap-4 text-sm text-gray-600">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </nav>
-
+        <Navbar name="Chel"/>
         <section className="flex min-h-[70vh] flex-col justify-center gap-6">
           <p className="text-sm font-medium uppercase tracking-widest text-gray-500">
             Frontend Developer
