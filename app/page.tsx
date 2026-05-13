@@ -62,8 +62,11 @@ export default function Home() {
               <ProjectCard
                 key={project.title}
                 title={project.title}
+                status={project.status}
                 description={project.description}
                 tech={project.tech}
+                githubUrl={project.githubUrl}
+                demoUrl={project.demoUrl}
               />
             ))}
           </div>
