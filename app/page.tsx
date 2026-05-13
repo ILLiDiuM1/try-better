@@ -1,3 +1,5 @@
+import { projects } from "@/data/projects";
+
 export default function Home() {
   return (
     <main className="min-h-screen px-6 py-10">
@@ -56,19 +58,23 @@ export default function Home() {
           <h2 className="mb-6 text-3xl font-bold">Projects</h2>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {["Portfolio Website", "Task Tracker", "API Project"].map(
-              (project) => (
-                <div
-                  key={project}
-                  className="rounded-2xl border p-5 shadow-sm"
-                >
-                  <h3 className="mb-2 text-xl font-semibold">{project}</h3>
-                  <p className="text-sm text-gray-600">
-                    A project built to practice frontend development skills.
-                  </p>
+            {projects.map((project) => (
+              <div key={project.title} className="rounded-2xl border p-5 shadow-sm">
+                <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
+                <p className="mb-4 text-sm text-gray-600">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
         </section>
 
