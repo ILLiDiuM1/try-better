@@ -5,6 +5,9 @@ import { useState } from "react";
 export function ContactForm() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
+  const [phone, setPhone] = useState("");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -12,10 +15,16 @@ export function ContactForm() {
     console.log({
       name,
       message,
+      email,
+      age,
+      phone,
     });
 
     setName("");
     setMessage("");
+    setEmail("");
+    setAge("");
+    setPhone("");
   }
 
   return (
@@ -27,7 +36,27 @@ export function ContactForm() {
         onChange={(e) => setName(e.target.value)}
         className="rounded-xl border px-4 py-3"
       />
-
+    <input
+        type="email"
+        placeholder="Your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="rounded-xl border px-4 py-3"
+      />
+      <input
+        type="number"
+        placeholder="Your age"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        className="rounded-xl border px-4 py-3"
+      />
+      <input
+        type="tel"
+        placeholder="Your phone number"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        className="rounded-xl border px-4 py-3"
+      />
       <textarea
         placeholder="Your message"
         value={message}
@@ -37,7 +66,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="w-fit rounded-xl bg-black px-5 py-3 text-white"
+        className="w-fit rounded-xl bg-black border border-white-300 px-5 py-3 text-white"
       >
         Send
       </button>

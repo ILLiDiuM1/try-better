@@ -13,7 +13,7 @@ export function Hero({ title, subtitle, label, githubUrl }: HeroProps) {
     <div className="flex gap-4">
       <Button href="#projects">View Projects</Button>
 
-      <Button href={githubUrl} variant="secondary">
+      <Button href={githubUrl}>
         GitHub
       </Button>
     </div>

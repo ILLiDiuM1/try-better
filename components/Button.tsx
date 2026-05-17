@@ -6,8 +6,8 @@ type ButtonProps = {
 
 export function Button({ href, children, variant = "primary" }: ButtonProps) {
   const styles = {
-    primary: "bg-black text-white",
-    secondary: "border border-gray-300 text-black",
+    primary: "bg-black border border-white-300 text-white",
+    secondary: "bg-gray-500 border border-white-300 text-black",
   };
 
   return (
