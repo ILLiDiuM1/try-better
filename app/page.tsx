@@ -4,11 +4,13 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Hero } from "@/components/Hero";
 import { skills } from "@/data/skills";
 import { Skills } from "@/components/Skills";
+import { About } from "@/components/About";
+import { Container } from "@/components/Container";
 
 export default function Home() {
   return (
     <main className="min-h-screen px-6 py-10">
-      <section className="mx-auto flex max-w-5xl flex-col gap-8">
+      <Container>
         <Navbar
           name="Chel"
           links={[
@@ -25,13 +27,7 @@ export default function Home() {
           githubUrl="https://github.com/ILLiDiuM1"
         />
 
-        <section id="about" className="border-t py-16">
-          <h2 className="mb-4 text-3xl font-bold">About me</h2>
-          <p className="max-w-2xl text-gray-600">
-            I am focused on becoming a frontend developer. Right now I am
-            building projects with Next.js, TypeScript, Tailwind CSS, and Git.
-          </p>
-        </section>
+        <About />
         <Skills skills={skills} />
         <section id="projects" className="border-t py-16">
           <h2 className="mb-6 text-3xl font-bold">Projects</h2>
@@ -57,7 +53,7 @@ export default function Home() {
             You can reach me through GitHub or LinkedIn.
           </p>
         </section>
-      </section>
+      </Container>
     </main>
   );
 }
