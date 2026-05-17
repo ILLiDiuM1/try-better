@@ -16,7 +16,7 @@ export function Navbar({ name, links, darkMode }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className={`flex items-center justify-between ${
-    darkMode ? "text-white" : "text-black"
+    darkMode ? "text-black" : "text-white"
   }`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
