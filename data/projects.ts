@@ -14,7 +14,7 @@ export const projects: Project[] = [
       "A personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     status: "In Progress",
-    githubUrl: "https://github.com/ILLiDiuM1/my-portfolio",
+    githubUrl: "https://github.com/ILLiDiuM1/try-better",
     demoUrl: "https://project-2nzkw.vercel.app",
 
   },

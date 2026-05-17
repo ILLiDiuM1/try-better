@@ -2,6 +2,8 @@ import { projects } from "@/data/projects";
 import { Navbar } from "@/components/Navbar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Hero } from "@/components/Hero";
+import { skills } from "@/data/skills";
+import { Skills } from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
             { label: "About", href: "#about" },
             { label: "Projects", href: "#projects" },
             { label: "Contact", href: "#contact" },
+            { label: "Skills", href: "#skills" },
           ]}
 />
         <Hero
@@ -29,7 +32,7 @@ export default function Home() {
             building projects with Next.js, TypeScript, Tailwind CSS, and Git.
           </p>
         </section>
-
+        <Skills skills={skills} />
         <section id="projects" className="border-t py-16">
           <h2 className="mb-6 text-3xl font-bold">Projects</h2>
 
