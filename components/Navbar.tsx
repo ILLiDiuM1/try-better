@@ -9,12 +9,15 @@ type NavLink = {
 type NavbarProps = {
   name: string;
   links: NavLink[];
+  darkMode: boolean;
 };
 
-export function Navbar({ name, links }: NavbarProps) {
+export function Navbar({ name, links, darkMode }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex items-center justify-between">
+    <nav className={`flex items-center justify-between ${
+    darkMode ? "text-white" : "text-black"
+  }`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="rounded-lg border px-3 py-1 text-sm md:hidden"
@@ -26,7 +29,10 @@ export function Navbar({ name, links }: NavbarProps) {
         <div
           className={`${
             isOpen ? "flex" : "hidden"
-          } flex-col gap-4 text-sm text-gray-600 md:flex md:flex-row`}
+          } flex-col gap-4 text-sm text-gray-600 md:flex md:flex-row ${
+          darkMode ? "text-gray-300" : "text-gray-600"
+        }`}
+            
         >
         {links.map((link) => (
           <a key={link.href} href={link.href}>
